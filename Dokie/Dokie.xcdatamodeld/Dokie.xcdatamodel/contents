@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CDChecksum" representedClassName="CDChecksum" syncable="YES">
+        <attribute name="checksum" optional="YES" attributeType="String"/>
+        <attribute name="encryptedKey" optional="YES" attributeType="Binary"/>
+        <attribute name="salt" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CDContent" representedClassName="CDContent" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <relationship name="document" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDocument" inverseName="content" inverseEntity="CDDocument"/>
+    </entity>
+    <entity name="CDDocument" representedClassName="CDDocument" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="content" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDContent" inverseName="document" inverseEntity="CDContent"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFolder" inverseName="documents" inverseEntity="CDFolder"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDTag" inverseName="document" inverseEntity="CDTag"/>
+    </entity>
+    <entity name="CDFile" representedClassName="CDFile" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CDFolder" representedClassName="CDFolder" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDDocument" inverseName="folder" inverseEntity="CDDocument"/>
+        <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFolder" inverseName="subfolders" inverseEntity="CDFolder"/>
+        <relationship name="subfolders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDFolder" inverseName="parentFolder" inverseEntity="CDFolder"/>
+    </entity>
+    <entity name="CDTag" representedClassName="CDTag" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="document" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDocument" inverseName="tags" inverseEntity="CDDocument"/>
+    </entity>
+    <entity name="CDVersion" representedClassName="CDVersion" syncable="YES">
+        <attribute name="info" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CDChecksum" positionX="-36" positionY="45" width="128" height="88"/>
+        <element name="CDContent" positionX="-27" positionY="54" width="128" height="73"/>
+        <element name="CDDocument" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="CDFile" positionX="-27" positionY="63" width="128" height="73"/>
+        <element name="CDFolder" positionX="-18" positionY="36" width="128" height="118"/>
+        <element name="CDTag" positionX="-27" positionY="63" width="128" height="73"/>
+        <element name="CDVersion" positionX="-36" positionY="9" width="128" height="58"/>
+    </elements>
+</model>
