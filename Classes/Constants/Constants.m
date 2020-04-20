@@ -14,8 +14,8 @@ NSString *const kDocumentNameKey                =   @"documentName";
 NSString *const kContentTypeKey                 =   @"contentType";
 NSString *const kContentTypeText                =   @"text";
 NSString *const kContentTypeFile                =   @"file";
-NSString *const kContentTitleKey                =   @"title";
-NSString *const kContentDetailKey               =   @"detail";
+NSString *const kContentTextKey                 =   @"text";
+NSString *const kContentDescriptionKey          =   @"description";
 NSString *const kContentFileIdKey               =   @"fileId";
 
 NSString *const kDeleteFileNotification         =   @"com:Dokie:kDeleteFileNotification";

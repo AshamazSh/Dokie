@@ -153,7 +153,7 @@ static NSString *const contentCellIdentifier = @"contentCellIdentifier";
     for (NSIndexPath *indexPath in self.selectedCells) {
         RACTupleUnpack(NSString *title, NSString *detail) = self.viewModel.content[indexPath.row];
         if (title.length > 0 && detail.length > 0) {
-            [toReturn addObject:[NSString stringWithFormat:@"%@: %@", title, detail]];
+            [toReturn addObject:[NSString stringWithFormat:@"%@: %@", detail, title]];
         }
         else if (title.length > 0) {
             [toReturn addObject:title];

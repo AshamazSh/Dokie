@@ -811,6 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = D9E562H7JV;
 				INFOPLIST_FILE = Dokie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -820,7 +821,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ashamazsh.Dokie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -830,6 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = D9E562H7JV;
 				INFOPLIST_FILE = Dokie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -839,7 +841,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ashamazsh.Dokie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

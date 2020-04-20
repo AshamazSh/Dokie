@@ -48,11 +48,11 @@
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = NSLocalizedString(@"Title", @"Title placeholder");
+        textField.placeholder = NSLocalizedString(@"Description", @"Description placeholder");
         textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     }];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = NSLocalizedString(@"Detail", @"Detail placeholder");
+        textField.placeholder = NSLocalizedString(@"Text", @"Text placeholder");
         textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     }];
     
@@ -60,11 +60,11 @@
     UIAlertAction *save = [UIAlertAction actionWithTitle:NSLocalizedString(@"Save", @"Save button text in alert view") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         @strongify(self);
         NSString *loadingGuid = [self.navigationRouter showLoading];
-        UITextField *titleField = alert.textFields[0];
-        UITextField *detailField = alert.textFields[1];
+        UITextField *detailField = alert.textFields[0];
+        UITextField *textField = alert.textFields[1];
         [[[self.coreDataManager addContentToDocument:self.document withDictionary:@{kContentTypeKey : kContentTypeText,
-                                                                                    kContentTitleKey : titleField.text ?: @"",
-                                                                                    kContentDetailKey : detailField.text ?: @""
+                                                                                    kContentTextKey : textField.text ?: @"",
+                                                                                    kContentDescriptionKey : detailField.text ?: @""
         }]
           concat:[self readDocument]]
          subscribeError:^(NSError * _Nullable error) {
@@ -95,7 +95,7 @@
             RACTupleUnpack(__unused CDDocument *document, NSDictionary *json, NSError *error) = tuple;
             if (!error) {
                 if ([json[kContentTypeKey] isEqual:kContentTypeText]) {
-                    [content addObject:RACTuplePack(json[kContentTitleKey], json[kContentDetailKey])];
+                    [content addObject:RACTuplePack(json[kContentTextKey], json[kContentDescriptionKey])];
                     [objects addObject:self.document.content[i]];
                 }
             }
@@ -157,12 +157,12 @@
                                                                 preferredStyle:UIAlertControllerStyleAlert];
         [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.text = title;
-            textField.placeholder = NSLocalizedString(@"Title", @"Title placeholder");
+            textField.placeholder = NSLocalizedString(@"Description", @"Description placeholder");
             textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         }];
         [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.text = detail;
-            textField.placeholder = NSLocalizedString(@"Detail", @"Detail placeholder");
+            textField.placeholder = NSLocalizedString(@"Text", @"Text placeholder");
             textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         }];
         
@@ -170,12 +170,12 @@
         UIAlertAction *save = [UIAlertAction actionWithTitle:NSLocalizedString(@"Save", @"Save button text in alert view") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             @strongify(self);
             NSString *loadingGuid = [self.navigationRouter showLoading];
-            UITextField *titleField = alert.textFields[0];
-            UITextField *detailField = alert.textFields[1];
+            UITextField *detailField = alert.textFields[0];
+            UITextField *textField = alert.textFields[1];
             [[[self.coreDataManager updateContent:self.displayedObjects[indexPath.row]
                                    withDictionary:@{kContentTypeKey : kContentTypeText,
-                                                    kContentTitleKey : titleField.text ?: @"",
-                                                    kContentDetailKey : detailField.text ?: @""
+                                                    kContentTextKey : textField.text ?: @"",
+                                                    kContentDescriptionKey : detailField.text ?: @""
                                    }]
               concat:[self readDocument]]
              subscribeError:^(NSError * _Nullable error) {

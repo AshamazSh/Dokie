@@ -33,6 +33,7 @@
     tableView.tableFooterView = [UIView new];
     tableView.insetsContentViewsToSafeArea = YES;
     tableView.separatorColor = [AppearanceManager separatorColor];
+    tableView.separatorInset = UIEdgeInsetsMake(0, 16, 0, 0);
     return tableView;
 }
 

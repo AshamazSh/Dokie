@@ -14,8 +14,8 @@ extern NSString *const kDocumentNameKey;
 extern NSString *const kContentTypeKey;
 extern NSString *const kContentTypeText;
 extern NSString *const kContentTypeFile;
-extern NSString *const kContentTitleKey;
-extern NSString *const kContentDetailKey;
+extern NSString *const kContentTextKey;
+extern NSString *const kContentDescriptionKey;
 extern NSString *const kContentFileIdKey;
 
 extern NSString *const kDeleteFileNotification;
