@@ -151,17 +151,17 @@
 
 - (void)editContentAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < self.content.count) {
-        RACTupleUnpack(NSString *title, NSString *detail) = self.content[indexPath.row];
+        RACTupleUnpack(NSString *text, NSString *detail) = self.content[indexPath.row];
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Edit content", @"Edit content alert title")
                                                                        message:nil
                                                                 preferredStyle:UIAlertControllerStyleAlert];
         [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-            textField.text = title;
+            textField.text = detail;
             textField.placeholder = NSLocalizedString(@"Description", @"Description placeholder");
             textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         }];
         [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-            textField.text = detail;
+            textField.text = text;
             textField.placeholder = NSLocalizedString(@"Text", @"Text placeholder");
             textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         }];

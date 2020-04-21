@@ -67,7 +67,7 @@
     [self.view addSubview:tableView];
     
     UILabel *noContentLabel = [UI label];
-    noContentLabel.text = NSLocalizedString(@"Empty", @"Empty content text");
+    noContentLabel.text = NSLocalizedString(@"Folder is empty", @"Folder is empty content text");
     noContentLabel.alpha = 0;
     noContentLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:noContentLabel];

@@ -60,7 +60,7 @@
         return [self.scheduler scheduleWithResult:^(BOOL success) {
             @strongify(self);
             if (![self.encryptionManager checkPassword:password]) {
-                NSError *error = [NSError errorWithDomain:DokieErrorDomain code:999 userInfo:@{NSLocalizedDescriptionKey : NSLocalizedString(@"Invalid password.", @"Invalid password error text.")}];
+                NSError *error = [NSError errorWithDomain:DokieErrorDomain code:999 userInfo:@{NSLocalizedDescriptionKey : NSLocalizedString(@"Invalid password", @"Invalid password error text.")}];
                 [subscriber sendError:error];
             }
             else if (![self.encryptionManager changeToNewPassword:newPassword]) {

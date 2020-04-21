@@ -1,0 +1,161 @@
+/* 
+  Localizable.strings
+  Dokie
+
+  Created by Ashamaz Shidov on 21.04.2020.
+  Copyright © 2020 Ashamaz Shidov. All rights reserved.
+*/
+
+// Add file alert title
+"Add file" = "Add file";
+
+// Camera button text in alert view
+"Camera" = "Camera";
+
+// Library button text in alert view
+"Library" = "Library";
+
+// Cancel button text in alert view
+"Cancel" = "Cancel";
+
+// Delete button text in alert view
+"Delete" = "Delete";
+
+// Some error title
+"Some error occured. Please try again later." = "Some error occured. Please try again later.";
+
+// Add content alert title
+"Add content" = "Add content";
+
+// Description placeholder
+"Description" = "Description";
+
+// Text placeholder
+"Text" = "Text";
+
+// Save button text in alert view
+"Save" = "Save";
+
+// Edit text in alert view
+"Edit" = "Edit";
+
+// Copy button text in alert view
+"Copy" = "Copy";
+
+// Edit content alert title
+"Edit content" = "Edit content";
+
+// Invalid password error text
+"Invalid password" = "Invalid password";
+
+// Root folder title
+"Root" = "Root";
+
+// Ok button text in alert view
+"OK" = "OK";
+
+// Dokie info text
+"Dokie is free and open source application." = "Dokie is free and open source application.";
+
+// Source code text
+"Source code:" = "Source code:";
+
+// Contacts text
+"Contacts:" = "Contacts:";
+
+// Version text
+"Version:" = "Version:";
+
+// Current password label text
+"Current password:" = "Current password:";
+
+// Current password label text
+"New password:" = "New password:";
+
+// Change password button text
+"Change password" = "Change password";
+
+// Close navigation bar button text
+"Close" = "Close";
+
+// Files  segmeted text
+"Files" = "Files";
+
+// Select button text
+"Select" = "Select";
+
+// Share button text
+"Share" = "Share";
+
+// Share button text
+"Delete" = "Delete";
+
+// Edit content alert title
+"Delete selected content?" = "Delete selected content?";
+
+// Save button text in alert view
+"Yes" = "Yes";
+
+// Add text button text in alert view
+"Add text" = "Add text";
+
+// Add file button text in alert view
+"Add file" = "Add file";
+
+// Folder is empty content text
+"Folder is empty" = "Folder is empty";
+
+// Add folder button text in alert view
+"Add folder" = "Add folder";
+
+// Add document button text in alert view
+"Add document" = "Add document";
+
+// Folder name placeholder
+"Folder name" = "Folder name";
+
+// Can not create folder error alert.
+"Can not create folder. Please try again later." = "Can not create folder. Please try again later.";
+
+// Document name placeholder
+"Document name" = "Document name";
+
+// Can not create folder error alert.
+"Can not create document. Please try again later." = "Can not create document. Please try again later.";
+
+// Rename button text in alert view
+"Rename" = "Rename";
+
+// Rename folder alert title
+"Rename folder" = "Rename folder";
+
+// Can not rename folder error alert.
+"Can not rename folder. Please try again later." = "Can not rename folder. Please try again later.";
+
+// Rename document alert title
+"Rename document" = "Rename document";
+
+// Can not rename document error alert.
+"Can not rename document. Please try again later." = "Can not rename document. Please try again later.";
+
+// Read error alert text
+"Read error. Please try again later" = "Read error. Please try again later";
+
+// Logout button text in alert view
+"Logout" = "Logout";
+
+// About bar button text
+"About" = "About";
+
+// Password label text
+"Password:" = "Password:";
+
+// Create password label text
+"Welcome to Dokie!\nCreate password for your database:" = "Welcome to Dokie!\nCreate password for your database:";
+
+// Login button text
+"Login" = "Login";
+
+// Create database button text
+"Create database" = "Create database";
+

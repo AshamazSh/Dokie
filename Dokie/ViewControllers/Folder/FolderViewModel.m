@@ -265,7 +265,7 @@
              subscribeError:^(NSError * _Nullable error) {
                 @strongify(self);
                 [self.navigationRouter hideLoading:loadingGuid];
-                [self.navigationRouter showAlertWithTitle:@"" message:NSLocalizedString(@"Can not rename folder. Please try again later.", @"Can not rename folder error alert.")];
+                [self.navigationRouter showAlertWithTitle:@"" message:NSLocalizedString(@"Can not rename document. Please try again later.", @"Can not rename document error alert.")];
             }
              completed:^{
                 @strongify(self);

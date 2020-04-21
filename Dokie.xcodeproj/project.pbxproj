@@ -47,6 +47,7 @@
 		4FBC401E23DE276600E4EBE0 /* DocumentTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC401D23DE276600E4EBE0 /* DocumentTextTableViewCell.m */; };
 		4FBC403523E7373C00E4EBE0 /* ChangePasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC403423E7373C00E4EBE0 /* ChangePasswordViewModel.m */; };
 		4FBC403823E7374900E4EBE0 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC403723E7374900E4EBE0 /* ChangePasswordViewController.m */; };
+		4FBD880E244EEB3E00BAC172 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD880C244EEB3E00BAC172 /* Localizable.strings */; };
 		4FCC42FA23AE2FF7004A0F8D /* CoreDataScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC42F923AE2FF7004A0F8D /* CoreDataScheduler.m */; };
 		4FCC42FE23AE3B71004A0F8D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC42FD23AE3B71004A0F8D /* Constants.m */; };
 		4FCC430823AE4B1F004A0F8D /* DocumentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC430723AE4B1F004A0F8D /* DocumentTextView.m */; };
@@ -86,7 +87,6 @@
 		4F40894421D7F3590032565C /* Dokie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dokie.xcdatamodel; sourceTree = "<group>"; };
 		4F40894621D7F35B0032565C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F40894921D7F35B0032565C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4F40894B21D7F35B0032565C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F40894C21D7F35B0032565C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F40895621D7F41B0032565C /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		4F40895721D7F41B0032565C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -138,6 +138,12 @@
 		4FBC403423E7373C00E4EBE0 /* ChangePasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewModel.m; sourceTree = "<group>"; };
 		4FBC403623E7374900E4EBE0 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		4FBC403723E7374900E4EBE0 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		4FBD880B244EEB1700BAC172 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4FBD880D244EEB3E00BAC172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FBD880F244EEB4A00BAC172 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FBD8818244F9D4400BAC172 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FBD881A244F9D5100BAC172 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4FBD881D244F9FD000BAC172 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FCC42F823AE2FF7004A0F8D /* CoreDataScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataScheduler.h; sourceTree = "<group>"; };
 		4FCC42F923AE2FF7004A0F8D /* CoreDataScheduler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataScheduler.m; sourceTree = "<group>"; };
 		4FCC42FC23AE3B71004A0F8D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -237,10 +243,11 @@
 				4F40893B21D7F3590032565C /* AppDelegate.m */,
 				4F40894621D7F35B0032565C /* Assets.xcassets */,
 				4F241755244CC70E00597BF5 /* AppIcon.xcassets */,
+				4FBD880C244EEB3E00BAC172 /* Localizable.strings */,
 				4F40894821D7F35B0032565C /* LaunchScreen.storyboard */,
-				4F40894B21D7F35B0032565C /* Info.plist */,
 				4F40894C21D7F35B0032565C /* main.m */,
 				4F40894321D7F3590032565C /* Dokie.xcdatamodeld */,
+				4FBD881D244F9FD000BAC172 /* Info.plist */,
 			);
 			path = Dokie;
 			sourceTree = "<group>";
@@ -562,6 +569,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 4F40892E21D7F3590032565C;
 			productRefGroup = 4F40893821D7F3590032565C /* Products */;
@@ -579,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F40894A21D7F35B0032565C /* LaunchScreen.storyboard in Resources */,
+				4FBD880E244EEB3E00BAC172 /* Localizable.strings in Resources */,
 				4F40894721D7F35B0032565C /* Assets.xcassets in Resources */,
 				4F241756244CC70E00597BF5 /* AppIcon.xcassets in Resources */,
 			);
@@ -686,8 +695,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F40894921D7F35B0032565C /* Base */,
+				4FBD880B244EEB1700BAC172 /* ru */,
+				4FBD881A244F9D5100BAC172 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4FBD880C244EEB3E00BAC172 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FBD880D244EEB3E00BAC172 /* Base */,
+				4FBD880F244EEB4A00BAC172 /* ru */,
+				4FBD8818244F9D4400BAC172 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -697,6 +718,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -756,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -819,6 +842,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ashamazsh.Dokie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -839,6 +863,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ashamazsh.Dokie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

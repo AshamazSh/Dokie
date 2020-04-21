@@ -1,0 +1,160 @@
+/* 
+  Localizable.strings
+  Dokie
+
+  Created by Ashamaz Shidov on 21.04.2020.
+  Copyright © 2020 Ashamaz Shidov. All rights reserved.
+*/
+
+// Add file alert title
+"Add file" = "Добавить файл";
+
+// Camera button text in alert view
+"Camera" = "Камера";
+
+// Library button text in alert view
+"Library" = "Библиотека";
+
+// Cancel button text in alert view
+"Cancel" = "Отмена";
+
+// Delete button text in alert view
+"Delete" = "Удалить";
+
+// Some error title
+"Some error occured. Please try again later." = "Произошла ошибка. Пожалуйста, попробуйте позже.";
+
+// Add content alert title
+"Add content" = "Добавить данные";
+
+// Description placeholder
+"Description" = "Описание";
+
+// Text placeholder
+"Text" = "Текст";
+
+// Save button text in alert view
+"Save" = "Сохранить";
+
+// Edit text in alert view
+"Edit" = "Изменить";
+
+// Copy button text in alert view
+"Copy" = "Копировать";
+
+// Edit content alert title
+"Edit content" = "Изменить данные";
+
+// Invalid password error text
+"Invalid password" = "Неверный пароль";
+
+// Root folder title
+"Root" = "Кореневая папка";
+
+// Ok button text in alert view
+"OK" = "OK";
+
+// Dokie info text
+"Dokie is free and open source application." = "Dokie - это бесплатное прилоэение с открытым исходным кодом.";
+
+// Source code text
+"Source code:" = "Исходный код:";
+
+// Contacts text
+"Contacts:" = "Контакты:";
+
+// Version text
+"Version:" = "Версия:";
+
+// Current password label text
+"Current password:" = "Текущий пароль:";
+
+// Current password label text
+"New password:" = "Новый пароль:";
+
+// Change password button text
+"Change password" = "Сменить пароль";
+
+// Close navigation bar button text
+"Close" = "Закрыть";
+
+// Files  segmeted text
+"Files" = "Файлы";
+
+// Select button text
+"Select" = "Выбрать";
+
+// Share button text
+"Share" = "Отправить";
+
+// Share button text
+"Delete" = "Удалить";
+
+// Edit content alert title
+"Delete selected content?" = "Удалить выбранные данные?";
+
+// Save button text in alert view
+"Yes" = "Да";
+
+// Add text button text in alert view
+"Add text" = "Добавить текст";
+
+// Add file button text in alert view
+"Add file" = "Добавить файл";
+
+// Folder is empty content text
+"Folder is empty" = "Папка пуста";
+
+// Add folder button text in alert view
+"Add folder" = "Создать папку";
+
+// Add document button text in alert view
+"Add document" = "Создать документ";
+
+// Folder name placeholder
+"Folder name" = "Название папки";
+
+// Can not create folder error alert.
+"Can not create folder. Please try again later." = "Не удалось создать папку. Пожалуйста, попробуйте позже.";
+
+// Document name placeholder
+"Document name" = "Название документа";
+
+// Can not create folder error alert.
+"Can not create document. Please try again later." = "Не удалось создать документ. Пожалуйста, попробуйте позже.";
+
+// Rename button text in alert view
+"Rename" = "Переименовать";
+
+// Rename folder alert title
+"Rename folder" = "Переименовать папку";
+
+// Can not rename folder error alert.
+"Can not rename folder. Please try again later." = "Не удалось переименовать папку. Пожалуйста, попробуйте позже.";
+
+// Rename document alert title
+"Rename document" = "Переименовать документ";
+
+// Can not rename document error alert.
+"Can not rename document. Please try again later." = "Не удалось переименовать документ. Пожалуйста, попробуйте позже.";
+
+// Read error alert text
+"Read error. Please try again later" = "Ошибка чтения. Пожалуйста, попробуйте позже";
+
+// Logout button text in alert view
+"Logout" = "Выход";
+
+// About bar button text
+"About" = "Инфо";
+
+// Password label text
+"Password:" = "Пароль:";
+
+// Create password label text
+"Welcome to Dokie!\nCreate password for your database:" = "Добро пожаловать в Dokie!\nСоздайте пароль для вашей базы данных:";
+
+// Login button text
+"Login" = "Войти";
+
+// Create database button text
+"Create database" = "Создать базу данных";
