@@ -17,6 +17,7 @@
 @property (nonatomic, strong) LoginViewModel *viewModel;
 @property (nonatomic, strong) UITextField *passwordTextField;
 @property (nonatomic, strong) UIButton *loginButton;
+@property (nonatomic) BOOL didSuggestLoginWithBiometrics;
 
 @end
 
@@ -43,7 +44,17 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.passwordTextField becomeFirstResponder];
+    if (!self.didSuggestLoginWithBiometrics && (self.viewModel.touchIdLoginEnabled || self.viewModel.faceIdLoginEnabled)) {
+        self.didSuggestLoginWithBiometrics = YES;
+        @weakify(self);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            @strongify(self);
+            [self.viewModel loginWithBiometrics];
+        });
+    }
+    else {
+        [self.passwordTextField becomeFirstResponder];
+    }
 }
 
 - (void)setup {
