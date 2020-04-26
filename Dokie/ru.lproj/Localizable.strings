@@ -49,13 +49,13 @@
 "Invalid password" = "Неверный пароль";
 
 // Root folder title
-"Root" = "Кореневая папка";
+"Root" = "Корневая папка";
 
 // Ok button text in alert view
 "OK" = "OK";
 
 // Dokie info text
-"Dokie is free and open source application." = "Dokie - это бесплатное прилоэение с открытым исходным кодом.";
+"Dokie is free and open source application." = "Dokie - это бесплатное приложение с открытым исходным кодом.";
 
 // Source code text
 "Source code:" = "Исходный код:";
@@ -158,3 +158,21 @@
 
 // Create database button text
 "Create database" = "Создать базу данных";
+
+// Touch ID login question
+"Login with Touch ID" = "Войти с помощью Touch ID";
+
+// Face ID login question
+"Login with Face ID" = "Войти с помощью Face ID";
+
+// Touch ID assign question
+"Do you want to use Touch ID to login in future?" = "Использовать Touch ID как способ логина в дальнейшем?";
+
+// Face ID assign question
+"Do you want to use Face ID to login in future?" = "Использовать Face ID как способ логина в дальнейшем?";
+
+// Keychain error
+"Can not retrieve password from keychain" = "Не удалось получить текущий пароль из хранилища";
+
+// Do not ask button text in alert view
+"No (Do not ask again)" = "Нет (Больше не спрашивать)";

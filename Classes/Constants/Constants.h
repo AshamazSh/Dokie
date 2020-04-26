@@ -18,6 +18,9 @@ extern NSString *const kContentTextKey;
 extern NSString *const kContentDescriptionKey;
 extern NSString *const kContentFileIdKey;
 
+extern NSString *const kDBPasswordKey;
+extern NSString *const kDoNotSuggestPasswordSaveKey;
+
 extern NSString *const kDeleteFileNotification;
 extern NSString *const kReloadFolderNotification;
 

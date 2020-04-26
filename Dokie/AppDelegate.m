@@ -10,6 +10,7 @@
 #import "NavigationRouter.h"
 #import "AppearanceManager.h"
 #import "Logger.h"
+#import "LocalAuth.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,7 @@
     self.storeUrl = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"Main.sqlite"];
 
     [AppearanceManager setupAppearance];
+    [LocalAuth shared];
     [self configureMainCoreData];
     [self.navigationRouter createLoginViewController];
     return YES;

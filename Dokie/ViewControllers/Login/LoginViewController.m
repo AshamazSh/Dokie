@@ -79,17 +79,45 @@
         [self.loginButton setTitle:loginButtonText forState:UIControlStateNormal];
     }];
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(_passwordTextField, _loginButton, loginLabel);
+    UIButton *touchIdButton = [UI touchIdButton];
+    RAC(touchIdButton, alpha) = [RACObserve(self, viewModel.touchIdLoginEnabled) flattenMap:^__kindof RACSignal * _Nullable(NSNumber *touchIdLoginEnabled) {
+        return [RACSignal return:touchIdLoginEnabled.boolValue ? @1 : @0];
+    }];
+    touchIdButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id _) {
+        @strongify(self);
+        [self.viewModel loginWithBiometrics];
+        return [RACSignal empty];
+    }];
+    [self.view addSubview:touchIdButton];
+    
+    UIButton *faceIdButton = [UI faceIdButton];
+    RAC(faceIdButton, alpha) = [RACObserve(self, viewModel.faceIdLoginEnabled) flattenMap:^__kindof RACSignal * _Nullable(NSNumber *faceIdLoginEnabled) {
+        return [RACSignal return:faceIdLoginEnabled.boolValue ? @1 : @0];
+    }];
+    faceIdButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id _) {
+        @strongify(self);
+        [self.viewModel loginWithBiometrics];
+        return [RACSignal empty];
+    }];
+    [self.view addSubview:faceIdButton];
+
+    NSDictionary *views = NSDictionaryOfVariableBindings(_passwordTextField, _loginButton, loginLabel, touchIdButton, faceIdButton);
     NSDictionary *metrics = @{@"betweenMargin"      :   @16,
                               @"sideMargin"         :   @25,
                               @"buttonHeight"       :   @44,
-                              @"textFieldHeight"    :   @44
+                              @"textFieldHeight"    :   @44,
+                              @"bioButtonSize"      :   @30
                               };
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[loginLabel][touchIdButton(bioButtonSize)]-sideMargin-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[loginLabel][faceIdButton(bioButtonSize)]-sideMargin-|" options:0 metrics:metrics views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[_passwordTextField]-sideMargin-|" options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[loginLabel]-sideMargin-|" options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[loginLabel]-betweenMargin-[_passwordTextField(textFieldHeight)]-betweenMargin-[_loginButton(buttonHeight)]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[_loginButton]-sideMargin-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[loginLabel(>=bioButtonSize)]-betweenMargin-[_passwordTextField(textFieldHeight)]-betweenMargin-[_loginButton(buttonHeight)]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[touchIdButton(bioButtonSize)]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[faceIdButton(bioButtonSize)]" options:0 metrics:metrics views:views]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.passwordTextField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:0.6 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.loginButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    [NSLayoutConstraint activateConstraints:@[[touchIdButton.centerYAnchor constraintEqualToAnchor:loginLabel.centerYAnchor],
+                                              [faceIdButton.centerYAnchor constraintEqualToAnchor:loginLabel.centerYAnchor]]];
     
     [[[self.viewModel.enableInputSubject
        takeUntil:self.rac_willDeallocSignal]

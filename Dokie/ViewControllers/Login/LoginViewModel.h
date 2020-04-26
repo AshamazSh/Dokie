@@ -16,8 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) RACSubject *enableInputSubject;
 @property (nonatomic, strong, readonly) NSString *loginLabelText;
 @property (nonatomic, strong, readonly) NSString *loginButtonText;
+@property (nonatomic, readonly) BOOL touchIdLoginEnabled;
+@property (nonatomic, readonly) BOOL faceIdLoginEnabled;
 
 - (void)loginPressedWithPassword:(NSString *)password;
+- (void)loginWithBiometrics;
 - (void)showAbout;
 - (void)updateText;
 

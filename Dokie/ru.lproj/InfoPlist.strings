@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  Dokie
+
+  Created by Ashamaz Shidov on 23.04.2020.
+  Copyright © 2020 Ashamaz Shidov. All rights reserved.
+*/
+
+NSCameraUsageDescription = "Камера используется для добавления снимков к документу.";
+
+NSPhotoLibraryUsageDescription = "Библиотека используется для добавления снимков к документу.";
+
+NSFaceIDUsageDescription = "Face ID используется для логина в приложения без пароля";

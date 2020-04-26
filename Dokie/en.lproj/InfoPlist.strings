@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  Dokie
+
+  Created by Ashamaz Shidov on 23.04.2020.
+  Copyright © 2020 Ashamaz Shidov. All rights reserved.
+*/
+
+NSCameraUsageDescription = "The camera is used to capture pictures and add them to document.";
+
+NSPhotoLibraryUsageDescription = "The library is used to add images to document.";
+
+NSFaceIDUsageDescription = "The Face ID is used to login to the app without password";

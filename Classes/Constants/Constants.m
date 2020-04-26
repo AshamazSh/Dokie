@@ -18,6 +18,9 @@ NSString *const kContentTextKey                 =   @"text";
 NSString *const kContentDescriptionKey          =   @"description";
 NSString *const kContentFileIdKey               =   @"fileId";
 
+NSString *const kDBPasswordKey                  =   @"dbPassword";
+NSString *const kDoNotSuggestPasswordSaveKey    =   @"com:Dokie:kDoNotSuggestPasswordSaveKey";
+
 NSString *const kDeleteFileNotification         =   @"com:Dokie:kDeleteFileNotification";
 NSString *const kReloadFolderNotification       =   @"com:Dokie:kReloadFolderNotification";
 

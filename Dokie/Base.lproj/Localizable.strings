@@ -159,3 +159,20 @@
 // Create database button text
 "Create database" = "Create database";
 
+// Touch ID login question
+"Login with Touch ID" = "Login with Touch ID";
+
+// Face ID login question
+"Login with Face ID" = "Login with Face ID";
+
+// Touch ID assign question
+"Do you want to use Touch ID to login in future?" = "Do you want to use Touch ID to login in future?";
+
+// Face ID assign question
+"Do you want to use Face ID to login in future?" = "Do you want to use Face ID to login in future?";
+
+// Keychain error
+"Can not retrieve password from keychain" = "Can not retrieve password from keychain";
+
+// Do not ask button text in alert view
+"No (Do not ask again)" = "No (Do not ask again)";

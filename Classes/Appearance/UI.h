@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UILabel *)detailLabel;
 + (UITableView *)tableView;
 + (UIButton *)actionButton;
++ (UIButton *)touchIdButton;
++ (UIButton *)faceIdButton;
 + (UIButton *)button;
 + (UICollectionView *)collectionViewWithLineSpacing:(CGFloat)lineSpacing itemSpacing:(CGFloat)itemSpacing;
 + (UIView *)separator;

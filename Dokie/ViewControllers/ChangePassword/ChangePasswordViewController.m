@@ -47,9 +47,35 @@
     currentPassLabel.text = NSLocalizedString(@"Current password:", @"Current password label text");
     [self.view addSubview:currentPassLabel];
     
+    UIButton *touchIdButton = [UI touchIdButton];
+    RAC(touchIdButton, alpha) = [RACObserve(self, viewModel.touchIdLoginEnabled) flattenMap:^__kindof RACSignal * _Nullable(NSNumber *touchIdLoginEnabled) {
+        return [RACSignal return:touchIdLoginEnabled.boolValue ? @1 : @0];
+    }];
+    touchIdButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id _) {
+        @strongify(self);
+        [self.viewModel retrieveCurrentPasswordWithBiometrics];
+        return [RACSignal empty];
+    }];
+    [self.view addSubview:touchIdButton];
+    
+    UIButton *faceIdButton = [UI faceIdButton];
+    RAC(faceIdButton, alpha) = [RACObserve(self, viewModel.faceIdLoginEnabled) flattenMap:^__kindof RACSignal * _Nullable(NSNumber *faceIdLoginEnabled) {
+        return [RACSignal return:faceIdLoginEnabled.boolValue ? @1 : @0];
+    }];
+    faceIdButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id _) {
+        @strongify(self);
+        [self.viewModel retrieveCurrentPasswordWithBiometrics];
+        return [RACSignal empty];
+    }];
+    [self.view addSubview:faceIdButton];
+
     self.currentPasswordTextField = [UI textField];
     self.currentPasswordTextField.secureTextEntry = YES;
     [self.view addSubview:self.currentPasswordTextField];
+    [[self.viewModel.currentPasswordSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSString *password) {
+        @strongify(self);
+        self.currentPasswordTextField.text = password;
+    }];
 
     UILabel *newPassLabel = [UI label];
     newPassLabel.text = NSLocalizedString(@"New password:", @"Current password label text");
@@ -63,20 +89,25 @@
     [changeButton setTitle:NSLocalizedString(@"Change password", @"Change password button text") forState:UIControlStateNormal];
     [self.view addSubview:changeButton];
 
-    NSDictionary *views = NSDictionaryOfVariableBindings(currentPassLabel, _currentPasswordTextField, newPassLabel, _passwordTextField, changeButton);
+    NSDictionary *views = NSDictionaryOfVariableBindings(currentPassLabel, _currentPasswordTextField, newPassLabel, _passwordTextField, changeButton, touchIdButton, faceIdButton);
     NSDictionary *metrics = @{@"topMargin"          :   @20,
                               @"betweenMargin"      :   @20,
                               @"betweenSmallMargin" :   @16,
                               @"sideMargin"         :   @25,
                               @"buttonHeight"       :   @44,
-                              @"textFieldHeight"    :   @44
+                              @"textFieldHeight"    :   @44,
+                              @"labelHeight"        :   @30
                               };
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[currentPassLabel]-sideMargin-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[touchIdButton(labelHeight)]-sideMargin-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[faceIdButton(labelHeight)]-sideMargin-|" options:0 metrics:metrics views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[_currentPasswordTextField]-sideMargin-|" options:0 metrics:metrics views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[newPassLabel]-sideMargin-|" options:0 metrics:metrics views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[_passwordTextField]-sideMargin-|" options:0 metrics:metrics views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-sideMargin-[changeButton]-sideMargin-|" options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-topMargin-[currentPassLabel]-betweenSmallMargin-[_currentPasswordTextField(textFieldHeight)]-betweenMargin-[newPassLabel]-betweenSmallMargin-[_passwordTextField(textFieldHeight)]-betweenMargin-[changeButton(buttonHeight)]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-topMargin-[currentPassLabel(labelHeight)]-betweenSmallMargin-[_currentPasswordTextField(textFieldHeight)]-betweenMargin-[newPassLabel(labelHeight)]-betweenSmallMargin-[_passwordTextField(textFieldHeight)]-betweenMargin-[changeButton(buttonHeight)]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-topMargin-[touchIdButton(labelHeight)]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-topMargin-[faceIdButton(labelHeight)]" options:0 metrics:metrics views:views]];
 
     UIView *loadingView = [UI shadowView];
     loadingView.alpha = 0;

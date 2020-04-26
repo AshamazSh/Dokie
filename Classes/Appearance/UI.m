@@ -51,6 +51,20 @@
     return actionButton;
 }
 
++ (UIButton *)touchIdButton {
+    UIButton *touchIdButton = [UI actionButton];
+    [touchIdButton setImage:[UIImage imageNamed:@"touch_id.png"] forState:UIControlStateNormal];
+    touchIdButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    return touchIdButton;
+}
+
++ (UIButton *)faceIdButton {
+    UIButton *faceIdButton = [UI actionButton];
+    [faceIdButton setImage:[UIImage imageNamed:@"face_id.png"] forState:UIControlStateNormal];
+    faceIdButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    return faceIdButton;
+}
+
 + (UICollectionView *)collectionViewWithLineSpacing:(CGFloat)lineSpacing itemSpacing:(CGFloat)itemSpacing {
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
