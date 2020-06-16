@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Dokie
 
@@ -176,3 +176,41 @@
 
 // Do not ask button text in alert view
 "No (Do not ask again)" = "No (Do not ask again)";
+
+// Add tag text
+"Add tag" = "Add tag";
+
+// Add text
+"Add" = "Add";
+
+// Edit tag title
+"Edit tag" = "Edit tag";
+
+// Search tags
+"Search tags" = "Search tags";
+
+// Q/A
+"Q/A" = "Q/A";
+
+// Question
+"Q: " = "Q: ";
+
+// Answer
+"A: " = "A: ";
+
+// Q/A
+"I forgot my password. Is there any way to restore it?" = "I forgot my password. Is there any way to restore it?";
+"Currently no. You can use touch/face id to store and access your password via keychain." = "Currently no. You can use touch/face id to store and access your password via keychain.";
+"I deleted the app. Is it possible to restore my data after that?" = "I deleted the app. Is it possible to restore my data after that?";
+"There is no way to restore them. All data will be deleted as well." = "There is no way to restore them. All data will be deleted as well.";
+"Will be photos from my gallery deleted after I import them to the app?" = "Will be photos from my gallery deleted after I import them to the app?";
+"No. App does not delete images from your gallery." = "No. App does not delete images from your gallery.";
+"Can I have any backups in the app?" = "Can I have any backups in the app?";
+"App does not support backups for now. But you can backup your device using iTunes or iCloud." = "App does not support backups for now. But you can backup your device using iTunes or iCloud.";
+"Are my images stored in app as separate files?" = "Are my images stored in app as separate files?";
+"No. All images will be encrypted and stored in one file." =  "No. All images will be encrypted and stored in one file.";
+"Does app collect any info of stored data?" = "Does app collect any info of stored data?";
+"No. App does not track any of your data." = "No. App does not track any of your data.";
+
+// Support
+"Have any ideas how to make this app better? Feel free to mail me:" = "Have any ideas how to make this app better? Feel free to mail me:";

@@ -1,16 +1,25 @@
 PODS:
-  - ReactiveObjC (3.1.1)
+  - ImagePicker (3.2.0)
+  - ReactiveCocoa (10.2.0):
+    - ReactiveSwift (~> 6.2)
+  - ReactiveSwift (6.2.1)
 
 DEPENDENCIES:
-  - ReactiveObjC (~> 3)
+  - ImagePicker
+  - ReactiveCocoa
+  - ReactiveSwift
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - ReactiveObjC
+  trunk:
+    - ImagePicker
+    - ReactiveCocoa
+    - ReactiveSwift
 
 SPEC CHECKSUMS:
-  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
+  ReactiveCocoa: a123c42f449c552460a4ee217dd49c76a17c8204
+  ReactiveSwift: 07ddf579f4eb3ee3bd656214f0461aaf2c0fd639
 
-PODFILE CHECKSUM: 44643271a7d4c8e2a54092cacd1612b12a3e97bd
+PODFILE CHECKSUM: f5c85f49ad329b4529b3e939025c279f6da075d0
 
 COCOAPODS: 1.9.1

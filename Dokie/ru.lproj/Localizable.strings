@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Dokie
 
@@ -176,3 +176,41 @@
 
 // Do not ask button text in alert view
 "No (Do not ask again)" = "Нет (Больше не спрашивать)";
+
+// Add tag text
+"Add tag" = "Добавить тег";
+
+// Add text
+"Add" = "Добавить";
+
+// Edit tag title
+"Edit tag" = "Редактировать тег";
+
+// Search tags
+"Search tags" = "Поиск по тегам";
+
+// Q/A
+"Q/A" = "Вопросы/Ответы";
+
+// Question
+"Q: " = "В: ";
+
+// Answer
+"A: " = "О: ";
+
+// Q/A
+"I forgot my password. Is there any way to restore it?" = "Я забыл свой пароль. Могу ли я как то восстановить его?";
+"Currently no. You can use touch/face id to store and access your password via keychain." = "На данный момент нет. Вы можете использовать touch/face id для хранения и доступа к своему паролю.";
+"I deleted the app. Is it possible to restore my data after that?" = "Я удалил приложение. Возможно ли восстановить данные?";
+"There is no way to restore them. All data will be deleted as well." = "Возможности восстановления данных после удаления нет.";
+"Will be photos from my gallery deleted after I import them to the app?" = "Удалятся ли мои фото из галлереи после того как я их добавлю в приложение?";
+"No. App does not delete images from your gallery." = "Нет. Приложение не удаляет фотографии из галлереи.";
+"Can I have any backups in the app?" = "Могу ли я создать резервную копию в приложении?";
+"App does not support backups for now. But you can backup your device using iTunes or iCloud." = "На данном этапе приложение не поддерживает резервные копии. Но можно сделать резервную копию с помощью iTunes или iCloud.";
+"Are my images stored in app as separate files?" = "Фотографии хранятся в приложении как отдельные файлы?";
+"No. All images will be encrypted and stored in one file." =  "Нет. Все фото хранятся в зашифрованном виде в одном файле.";
+"Does app collect any info of stored data?" = "Собирает ли приложение какие либо данные?";
+"No. App does not track any of your data." = "Нет. Приложение не собирает какую либо информацию.";
+
+// Support
+"Have any ideas how to make this app better? Feel free to mail me:" = "Если у вас есть какие либо идеи или пожелания как сделать это приложение лучше - не стесняйтесь писать мне на:";

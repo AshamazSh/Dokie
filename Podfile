@@ -3,7 +3,9 @@ platform :ios, '11.0'
 use_frameworks!
 
 def shared_pods
-  pod 'ReactiveObjC', '~> 3'
+  pod 'ReactiveCocoa'
+  pod 'ReactiveSwift'
+  pod 'ImagePicker'
 end
 
 target 'Dokie' do

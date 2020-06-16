@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,13 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-ID-eK6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_icon" highlightedImage="transparent_icon" translatesAutoresizingMaskIntoConstraints="NO" id="khc-VG-cNj">
                                 <rect key="frame" x="145" y="333" width="124" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="ALP-3t-X57"/>
+                                    <constraint firstAttribute="height" constant="200" id="Pue-qi-NY2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0B-qQ-Xiz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b0-cZ-dDB">
                                 <rect key="frame" x="160" y="541" width="94" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,13 +29,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19607843137254902" green="0.28235294117647058" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="w0B-qQ-Xiz" firstAttribute="centerX" secondItem="ZUK-ID-eK6" secondAttribute="centerX" id="8z1-Mt-GXQ"/>
-                            <constraint firstItem="w0B-qQ-Xiz" firstAttribute="top" secondItem="ZUK-ID-eK6" secondAttribute="bottom" constant="8" id="AuG-j7-j9U"/>
-                            <constraint firstItem="ZUK-ID-eK6" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="RDm-43-Hvx"/>
-                            <constraint firstItem="ZUK-ID-eK6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SgO-mH-me6"/>
-                            <constraint firstItem="ZUK-ID-eK6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-20" id="wgb-SJ-210"/>
+                            <constraint firstItem="khc-VG-cNj" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="HQr-JV-CD0"/>
+                            <constraint firstItem="8b0-cZ-dDB" firstAttribute="centerX" secondItem="khc-VG-cNj" secondAttribute="centerX" id="SX0-PB-kT7"/>
+                            <constraint firstItem="khc-VG-cNj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lvv-Ti-gQI"/>
+                            <constraint firstItem="khc-VG-cNj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-20" id="waE-s3-k4F"/>
+                            <constraint firstItem="8b0-cZ-dDB" firstAttribute="top" secondItem="khc-VG-cNj" secondAttribute="bottom" constant="8" id="xKm-DX-0Jb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
