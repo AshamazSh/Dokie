@@ -11,3 +11,5 @@ NSCameraUsageDescription = "The camera is used to capture pictures and add them 
 NSPhotoLibraryUsageDescription = "The library is used to add images to document.";
 
 NSFaceIDUsageDescription = "The Face ID is used to login to the app without password";
+
+NSLocationWhenInUseUsageDescription = "Location is used to add them to images when you take a picture.";

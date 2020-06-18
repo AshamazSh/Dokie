@@ -63,10 +63,20 @@ class FolderViewController: BaseViewController, UISearchDisplayDelegate {
         
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.barTintColor = Appearance.backgroundColor
-        searchBar.searchTextField.backgroundColor = Appearance.tagBackgroundColor
         searchBar.placeholder = String.localized("Search tags")
-        searchBar.searchTextField.tintColor = .white
-        searchBar.searchTextField.textColor = .white
+        searchBar.backgroundImage = nil
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.backgroundColor = Appearance.tagBackgroundColor
+            searchBar.searchTextField.tintColor = .white
+            searchBar.searchTextField.textColor = .white
+        }
+        else if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = Appearance.tagBackgroundColor
+            textfield.tintColor = .white
+            textfield.textColor = .white
+            textfield.background = nil
+        }
+
         searchBar.delegate = self
         view.addSubview(searchBar)
         

@@ -47,23 +47,23 @@ class AboutViewController: BaseViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.dataDetectorTypes = .all
         textView.text = String.localized("Q/A") + "\n\n" +
-            String.localized("Q: ") + String.localized("I forgot my password. Is there any way to restore it?") + "\n\n" +
-            String.localized("A: ") + String.localized("Currently no. You can use touch/face id to store and access your password via keychain.") + "\n\n" +
+            String.localized("Q: ") + String.localized("I forgot my password. Is there any way to restore it?") + "\n" +
+            String.localized("A: ") + String.localized("Currently no. You can use touch/face id to store and access your password via keychain.") + "\n\n\n" +
             
-            String.localized("Q: ") + String.localized("I deleted the app. Is it possible to restore my data after that?") + "\n\n" +
-            String.localized("A: ") + String.localized("There is no way to restore them. All data will be deleted as well.") + "\n\n" +
+            String.localized("Q: ") + String.localized("I deleted the app. Is it possible to restore my data after that?") + "\n" +
+            String.localized("A: ") + String.localized("There is no way to restore them. All data will be deleted as well.") + "\n\n\n" +
             
-            String.localized("Q: ") + String.localized("Will be photos from my gallery deleted after I import them to the app?") + "\n\n" +
-            String.localized("A: ") + String.localized("No. App does not delete images from your gallery.") + "\n\n" +
+            String.localized("Q: ") + String.localized("Will be photos from my gallery deleted after I import them to the app?") + "\n" +
+            String.localized("A: ") + String.localized("No. App does not delete images from your gallery.") + "\n\n\n" +
             
-            String.localized("Q: ") + String.localized("Can I have any backups in the app?") + "\n\n" +
-            String.localized("A: ") + String.localized("App does not support backups for now. But you can backup your device using iTunes or iCloud.") + "\n\n" +
+            String.localized("Q: ") + String.localized("Can I have any backups in the app?") + "\n" +
+            String.localized("A: ") + String.localized("App does not support backups for now. But you can backup your device using iTunes or iCloud.") + "\n\n\n" +
             
-            String.localized("Q: ") + String.localized("Are my images stored in app as separate files?") + "\n\n" +
-            String.localized("A: ") + String.localized("No. All images will be encrypted and stored in one file.") + "\n\n" +
+            String.localized("Q: ") + String.localized("Are my images stored in app as separate files?") + "\n" +
+            String.localized("A: ") + String.localized("No. All images will be encrypted and stored in one file.") + "\n\n\n" +
             
-            String.localized("Q: ") + String.localized("Does app collect any info of stored data?") + "\n\n" +
-            String.localized("A: ") + String.localized("No. App does not track any of your data.") + "\n\n" +
+            String.localized("Q: ") + String.localized("Does app collect any info of stored data?") + "\n" +
+            String.localized("A: ") + String.localized("No. App does not track any of your data.") + "\n\n\n" +
 
             "\n" +
             String.localized("Have any ideas how to make this app better? Feel free to mail me:") + " ashamazsh@gmail.com" + "\n\n" +
